@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop mo ta Temperature</title>
+</head>
+<body>
+    <script>
+        let Temperature = function (doC) {
+            this.doC = doC;
+
+            this.getdoC = function () {
+                return this.doC;
+            }
+
+            this.chuyenCsangF = function () {
+                return (doC*1.8 + 32);
+            }
+            this.chuyenCsangKelvin = function () {
+                return (doC + 273.15);
+            }
+        }
+        let doC = new Temperature(25);
+        alert("Chuyen sang do F : " + doC.chuyenCsangF() + ", Chuyen sang do Kelvin : " + doC.chuyenCsangKelvin());
+    </script>
+</body>
+</html>
